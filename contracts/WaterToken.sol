@@ -8,7 +8,7 @@ contract WaterToken is MintableToken {
   uint public decimals = 2;
   uint public INITIAL_SUPPLY = 1000;
 
-  function MintableToken() public {
+  function WaterToken() public {
     totalSupply_ = INITIAL_SUPPLY;
     balances[msg.sender] = INITIAL_SUPPLY;
   }
