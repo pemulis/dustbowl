@@ -1,4 +1,4 @@
-pragma solidity ^0.4.18;
+pragma solidity ^0.4.19;
 
 import "./WaterToken.sol";
 import 'zeppelin-solidity/contracts/crowdsale/emission/MintedCrowdsale.sol';
