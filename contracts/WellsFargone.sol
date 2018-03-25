@@ -1,6 +1,6 @@
 pragma solidity ^0.4.19;
 
-import "./WaterToken.sol";
+import "./Water.sol";
 import 'zeppelin-solidity/contracts/crowdsale/emission/MintedCrowdsale.sol';
 
 contract WellsFargone is MintedCrowdsale {

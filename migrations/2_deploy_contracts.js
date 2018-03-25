@@ -1,7 +1,7 @@
 const SimpleStorage = artifacts.require("./SimpleStorage.sol");
 const TutorialToken = artifacts.require("./TutorialToken.sol");
 const ComplexStorage = artifacts.require("./ComplexStorage.sol");
-const WaterToken = artifacts.require("./WaterToken.sol");
+const WaterToken = artifacts.require("./Water.sol");
 const WellsFargone = artifacts.require("./WellsFargone.sol");
 
 module.exports = function(deployer, network, accounts) {
@@ -13,14 +13,14 @@ module.exports = function(deployer, network, accounts) {
   deployer.deploy(ComplexStorage);
   return deployer
     .then(() => {
-        return deployer.deploy(WaterToken);
+        return deployer.deploy(Water);
     })
     .then(() => {
         return deployer.deploy(
             WellsFargone,
             rate,
             wallet,
-            WaterToken.address
+            Water.address
         );
     });
 };
