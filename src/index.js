@@ -35,7 +35,9 @@ const options = {
   contracts: [
     ComplexStorage,
     SimpleStorage,
-    TutorialToken
+    TutorialToken,
+    Water,
+    WellsFargone
   ],
   events: {
     SimpleStorage: ['StorageSet']
