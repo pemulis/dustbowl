@@ -14,6 +14,8 @@ import LoadingContainer from './layouts/loading/LoadingContainer'
 import ComplexStorage from './../build/contracts/ComplexStorage.json'
 import SimpleStorage from './../build/contracts/SimpleStorage.json'
 import TutorialToken from './../build/contracts/TutorialToken.json'
+import Water from './../build/contracts/Water.json'
+import WellsFargone from './../build/contracts/WellsFargone.json'
 
 // Redux Store
 import store from './store'
