@@ -13,5 +13,10 @@ module.exports = function(deployer, network, accounts) {
   deployer.deploy(ComplexStorage);
   deployer.deploy(Water).then(function() {
     return deployer.deploy(WellsFargone, rate, wallet, Water.address);
+  }).then(function() {
+    return Water.deployed();
+  }).then(function(instance) {
+    waterRights = instance;
+    waterRights.transferOwnership(WellsFargone.address);
   });
 };
