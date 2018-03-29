@@ -20,9 +20,7 @@ class Home extends Component {
             <p>Buy precious life-giving Water from ghosts in exchange for Ether, which they can use on the ethereal plane.</p>
             <p><strong>Total Supply</strong>: <ContractData contract="Water" method="totalSupply" /> <ContractData contract="Water" method="symbol" /></p>
             <p><strong>My Balance</strong>: <ContractData contract="Water" method="balanceOf" methodArgs={[this.props.accounts[0]]} /></p>
-            <h3>Send Tokens</h3>
-            <ContractForm contract="TutorialToken" method="transfer" labels={['To Address', 'Amount to Buy']} />
-
+            <h3>Buy Tokens By Transferring Ether to Contract in MetaMask</h3>
             <br/><br/>
           </div>
 
