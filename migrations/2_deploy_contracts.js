@@ -11,16 +11,7 @@ module.exports = function(deployer, network, accounts) {
   deployer.deploy(SimpleStorage);
   deployer.deploy(TutorialToken);
   deployer.deploy(ComplexStorage);
-  return deployer
-    .then(() => {
-        return deployer.deploy(Water);
-    })
-    .then(() => {
-        return deployer.deploy(
-            WellsFargone,
-            rate,
-            wallet,
-            Water.address
-        );
-    });
+  deployer.deploy(Water).then(function() {
+    return deployer.deploy(WellsFargone, rate, wallet, Water.address);
+  });
 };
