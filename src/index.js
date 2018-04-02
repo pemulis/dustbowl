@@ -11,9 +11,6 @@ import HomeContainer from './layouts/home/HomeContainer'
 import LoadingContainer from './layouts/loading/LoadingContainer'
 
 // Contracts
-import ComplexStorage from './../build/contracts/ComplexStorage.json'
-import SimpleStorage from './../build/contracts/SimpleStorage.json'
-import TutorialToken from './../build/contracts/TutorialToken.json'
 import Water from './../build/contracts/Water.json'
 import WellsFargone from './../build/contracts/WellsFargone.json'
 
@@ -33,14 +30,10 @@ const options = {
     }
   },
   contracts: [
-    ComplexStorage,
-    SimpleStorage,
-    TutorialToken,
     Water,
     WellsFargone
   ],
   events: {
-    SimpleStorage: ['StorageSet']
   }
 }
 
