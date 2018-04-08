@@ -1,16 +1,22 @@
 const Water = artifacts.require("Water");
 const WellsFargone = artifacts.require('WellsFargone');
 
-contract('WellsFargone', async(accounts) => {
+contract('WellsFargone', function(accounts) {
   const rate = new web3.BigNumber(1000);
   const wallet = accounts[1];
 
-  const waterInstance = await Water.new({from: accounts[0]});
-  const wellsFargoneInstance = await WellsFargone.new(rate, wallet, Water.address);
+  let waterInstance;
+  let wellsFargoneInstance;
+
+  beforeEach(async function () {
+    waterInstance = await Water.new({from: accounts[1]});
+    wellsFargoneInstance = await WellsFargone.new(rate, wallet, Water.address);
+  });
 
   it("should transfer ownership of Water to WellsFargone", async() => {
     waterInstance.transferOwnership(WellsFargone.address);
-    let waterOwner = waterInstance.owner;
+    let waterOwner = function () { return waterInstance.owner; };
+    console.log(waterOwner);
     assert.equal(waterOwner, WellsFargone.address);
   });
 });
