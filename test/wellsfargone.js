@@ -10,12 +10,13 @@ contract('WellsFargone', function(accounts) {
 
   beforeEach(async function () {
     waterInstance = await Water.new({from: accounts[1]});
+    console.log(waterInstance.address);
     wellsFargoneInstance = await WellsFargone.new(rate, wallet, Water.address);
   });
 
   it("should transfer ownership of Water to WellsFargone", async() => {
     waterInstance.transferOwnership(WellsFargone.address);
-    let waterOwner = function () { return waterInstance.owner; };
+    let waterOwner = await waterInstance.owner();
     console.log(waterOwner);
     assert.equal(waterOwner, WellsFargone.address);
   });
