@@ -9,32 +9,13 @@ contract('WellsFargone', function(accounts) {
   let wellsFargoneInstance;
 
   beforeEach(async function () {
-    waterInstance = await Water.new({from: accounts[1]});
-    console.log(waterInstance.address);
+    waterInstance = await Water.new();
     wellsFargoneInstance = await WellsFargone.new(rate, wallet, Water.address);
   });
 
   it("should transfer ownership of Water to WellsFargone", async() => {
-    waterInstance.transferOwnership(WellsFargone.address);
+    await waterInstance.transferOwnership(wellsFargoneInstance.address);
     let waterOwner = await waterInstance.owner();
-    console.log(waterOwner);
-    assert.equal(waterOwner, WellsFargone.address);
+    assert.equal(waterOwner, wellsFargoneInstance.address);
   });
 });
-
-/* These tests aren't working. Going to try to rewrite async/await style. */
-
-/*
-contract('WellsFargone', function(accounts) {
-  it("should mint 1000000000000000000000 water tokens when user sends 1 ether", function() {
-    return WellsFargone.deployed().then(function(wellsFargoneInstance) {
-      web3.eth.sendTransaction({from:accounts[0],to:wellsFargoneInstance.address,value:web3.toWei(1, "ether")});
-      return Water.deployed();
-    }).then(function(waterInstance) {
-      return waterInstance.methods.totalSupply.call();
-    }).then(function(supply) {
-      assert.equal(supply, 1000000000000000000000);
-    });
-  });
-});
-*/
