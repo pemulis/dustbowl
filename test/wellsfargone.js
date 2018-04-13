@@ -1,4 +1,4 @@
-const Water = artifacts.require("Water");
+const Water = artifacts.require('Water');
 const WellsFargone = artifacts.require('WellsFargone');
 
 contract('WellsFargone', function(accounts) {
@@ -11,10 +11,10 @@ contract('WellsFargone', function(accounts) {
   beforeEach(async function () {
     waterInstance = await Water.new();
     wellsFargoneInstance = await WellsFargone.new(rate, wallet, Water.address);
+    await waterInstance.transferOwnership(wellsFargoneInstance.address);
   });
 
   it("should transfer ownership of Water to WellsFargone", async() => {
-    await waterInstance.transferOwnership(wellsFargoneInstance.address);
     let waterOwner = await waterInstance.owner();
     assert.equal(waterOwner, wellsFargoneInstance.address);
   });
