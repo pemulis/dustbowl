@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ContractData, ContractForm } from 'drizzle-react-components'
+import { ContractData } from 'drizzle-react-components'
 import logo from '../../logo.png'
 
 class Home extends Component {
