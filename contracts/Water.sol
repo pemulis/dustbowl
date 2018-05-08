@@ -1,4 +1,4 @@
-pragma solidity ^0.4.19;
+pragma solidity ^0.4.23;
 
 import "openzeppelin-solidity/contracts/token/ERC20/MintableToken.sol";
 
@@ -8,7 +8,7 @@ contract Water is MintableToken {
   uint public decimals = 18;
   uint public INITIAL_SUPPLY = 0;
 
-  function Water() public {
+  constructor() public {
     totalSupply_ = INITIAL_SUPPLY;
     balances[msg.sender] = INITIAL_SUPPLY;
   }
