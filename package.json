@@ -17,7 +17,7 @@
     "dotenv": "2.0.0",
     "drizzle": "^1.0.1",
     "drizzle-react": "^1.0.1",
-    "drizzle-react-components": "^1.1.0",
+    "drizzle-react-components": "^1.0.1",
     "eslint": "3.8.1",
     "eslint-config-react-app": "^0.5.0",
     "eslint-loader": "1.6.0",
@@ -35,6 +35,7 @@
     "jest": "17.0.2",
     "json-loader": "0.5.4",
     "object-assign": "4.1.0",
+    "openzeppelin-solidity": "^1.9.0",
     "path-exists": "2.1.0",
     "postcss-loader": "1.0.0",
     "promise": "7.1.1",
@@ -48,20 +49,20 @@
     "webpack": "1.14.0",
     "webpack-dev-server": "1.16.2",
     "webpack-manifest-plugin": "1.1.0",
-    "whatwg-fetch": "1.0.0",
-    "zeppelin-solidity": "^1.8.0"
+    "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
-    "npm": "^5.8.0",
+    "eth-block-tracker-es5": "^2.3.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.2",
-    "react-router": "^3.2.1",
+    "react-router": "^3.0.2",
     "react-router-redux": "^4.0.7",
     "redux": "^3.6.0",
     "redux-auth-wrapper": "^1.0.0",
     "redux-saga": "^0.15.3",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "web3": "1.0.0-beta.34"
   },
   "scripts": {
     "start": "node scripts/start.js",
@@ -74,7 +75,7 @@
       "src/**/*.{js,jsx}"
     ],
     "setupFiles": [
-      "<rootDir>/config/polyfills.js"
+      "<rootDir>\\config\\polyfills.js"
     ],
     "testPathIgnorePatterns": [
       "<rootDir>[/\\\\](build|docs|node_modules)[/\\\\]"
@@ -83,8 +84,8 @@
     "testURL": "http://localhost",
     "transform": {
       "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+/.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*/.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+      "^.+\\.css$": "<rootDir>\\config\\jest\\cssTransform.js",
+      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>\\config\\jest\\fileTransform.js"
     },
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
