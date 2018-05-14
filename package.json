@@ -1,7 +1,6 @@
 {
   "name": "dustbowl",
   "version": "1.0.0",
-  "homepage": "https://pemulis.github.io/dustbowl",
   "devDependencies": {
     "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",
