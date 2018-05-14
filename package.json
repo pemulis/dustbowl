@@ -72,7 +72,7 @@
     "test": "node scripts/test.js --env=jsdom",
     "chain": "geth --datadir=\"/tmp/eth/60/01\" --nodiscover --maxpeers 0 --port 30301 --rpc --rpcapi \"db,eth,net,web3\" --rpcport 8101 --verbosity 6 console",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "git subtree push --prefix build_webpack origin gh-pages"
   },
   "jest": {
     "collectCoverageFrom": [
