@@ -7,16 +7,9 @@ class Home extends Component {
     return (
       <main className="container">
         <div className="pure-g">
-          <div className="pure-u-1-1 header">
-            <img src={logo} alt="drizzle-logo" />
-            <h1>Drizzle Examples</h1>
-            <p>Examples of how to get started with Drizzle in various situations.</p>
-
-            <br/><br/>
-          </div>
 
           <div className="pure-u-1-1">
-            <h2>Water</h2>
+            <h1>Water</h1>
             <p>Buy precious life-giving Water from ghosts in exchange for Ether, which they can use on the ethereal plane.</p>
             <p><strong>Total Supply</strong>: <ContractData contract="Water" method="totalSupply" /> <ContractData contract="Water" method="symbol" /></p>
             <p><strong>My Balance</strong>: <ContractData contract="Water" method="balanceOf" methodArgs={[this.props.accounts[0]]} /></p>
