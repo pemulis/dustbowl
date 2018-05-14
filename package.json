@@ -1,7 +1,7 @@
 {
   "name": "dustbowl",
   "version": "1.0.0",
-  "homepage": "http://pemuls.github.io/dustbowl",
+  "homepage": "https://pemuls.github.io/dustbowl",
   "devDependencies": {
     "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",
