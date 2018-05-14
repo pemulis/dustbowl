@@ -16,7 +16,7 @@
     "css-loader": "0.26.0",
     "detect-port": "1.0.1",
     "dotenv": "2.0.0",
-    "drizzle": "trufflesuite/drizzle",
+    "drizzle": "github:trufflesuite/drizzle",
     "drizzle-react": "^1.1.1",
     "drizzle-react-components": "^1.0.1",
     "eslint": "3.8.1",
