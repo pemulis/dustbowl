@@ -64,7 +64,7 @@
     "redux-saga": "^0.15.3",
     "redux-thunk": "^2.2.0",
     "truffle-hdwallet-provider": "^0.0.3",
-    "web3": "github:ethereum/web3.js"
+    "web3": "1.0.0-beta.28"
   },
   "scripts": {
     "start": "node scripts/start.js",
